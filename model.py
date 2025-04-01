@@ -35,4 +35,4 @@ def run(analyzers: list[str], directory: Path = Path(__file__).parent.absolute):
 
 if __name__ == "__main__":
     # Ask to call two "analyzers" located in "../analyzers"
-    run(["fourier.Frequency", "linear.Analyzer"], Path(__file__).parent / "analyzers")
+    run(["fourier.Frequency", "linear.Analyzer"], (Path(__file__).parent / "analyzers").absolute())
